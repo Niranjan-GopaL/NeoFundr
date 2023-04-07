@@ -1,0 +1,70 @@
+1)  Since a full stack app:
+    client => where React app will be residing in
+    neofundr => where we write our smart contract 
+
+2)  WHENEVER YOU ARE using VITE or NPM INIT or THIRDWEB or NEXT.JS any other dev env framework,
+    if they ask you to name the project name BUT YOU WANT IT TO BE IN THE CURRENT folder
+    DO THIS:
+
+    Enter your project name : ./ 
+
+3)
+
+
+<----------------------------------------------------------------------------------------------------->
+
+PROGRESS DIARY
+
+1)  npx thirdweb@latest create --contract (creates the neofundr project folder, ALL BLOCKCHAIN STUFF)
+
+    you can create a blockchain dev using Hardhat or Forge (not tht popular)
+
+
+- Thirdweb is an COMPLETE web3 dev framework.
+
+- Hardhat is an Ethereum dev env for proffesionals. It comes built-in with Hardhat Network, a local 
+  Ethereum network node designed for development. It allows you to deploy your contracts, run your tests 
+  and debug your code, all within the confines of your local machine.
+
+2) Build your smart contract
+
+- Usually deployement is the HARDEST PART of web3 dev ( it's very slow , nothing works ,etc etc) 
+  but thirdweb was made it extremely easily 
+
+3) Connect your wallet.
+    i) create a .env and add your PRIVATE KEY to it
+    ii) in hardhat config do this:  
+
+    solidity : {
+        <-------------------------->
+    defaultNetwork: 'goerli',
+    networks: {
+      hardhat: {},
+      goerli: {
+        url: 'https://rpc.ankr.com/eth_goerli',
+        accounts: [`0x${process.env.PRIVATE_KEY}`]
+      },
+        <-------------------------->
+    }
+}
+
+4) npm run deploy (DEPLOYS THE FUCKING SC)
+
+a cache and an artifact folder is generated and 
+upload successful, open this link to DEPLOY YOUR CONTRACT
+
+5) on clicking the link -> On thirdweb webpage, you can connect to your wallet 
+   -> thirdweb picks up your wallet and displays it in navbar
+   -> CHECK THE SMALL BOX THAT SAYS "Add to dashboard so I can find it in list of my SC"
+   -> DEPLOY NOW button (triggers TWO TRANSACTION)
+   -> In your wallet "confirm"
+
+   Now the smart contract is successfully deployed on whatever chain your on.
+   On your dashbaord you can see the smart contract .
+   In the code section of dashbaord, you can see how you can use it
+
+6) npx thirdweb@latest create --app ( cd ../client and do this )
+    WHEN IT ASKS ABOUT PROJECT NAME ==> ./ (cuz we are already in the client fodler where we 
+    want to build our react project )
+
+7) Start from there: Inside main.jsx in the repo (index. js in the vedio at 38 min) 

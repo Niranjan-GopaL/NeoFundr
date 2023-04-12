@@ -1,10 +1,11 @@
 import React from 'react'
 
-const App = () => {
+const CountBox = () => {
   return (
     <div>
+      
     </div>
   )
 }
 
-export default App
+export default CountBox

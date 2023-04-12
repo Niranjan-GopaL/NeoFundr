@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // The desiredChainId
 root.render(
-  <ThirdwebProvider desiredChainId={ChainId.Goerli}> 
+<ThirdwebProvider desiredChainId={ChainId.Goerli}> 
     <Router>
       {/* <StateContextProvider> */}
         <App />

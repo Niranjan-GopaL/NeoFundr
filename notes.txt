@@ -61,10 +61,14 @@ upload successful, open this link to DEPLOY YOUR CONTRACT
 
    Now the smart contract is successfully deployed on whatever chain your on.
    On your dashbaord you can see the smart contract .
-   In the code section of dashbaord, you can see how you can use it
+   In the code section of dashboard, you can see how you can use it
 
 6) npx thirdweb@latest create --app ( cd ../client and do this )
-    WHEN IT ASKS ABOUT PROJECT NAME ==> ./ (cuz we are already in the client fodler where we 
+    WHEN IT ASKS ABOUT PROJECT NAME ==> ./ (cuz we are already in the client folder where we 
     want to build our react project )
 
 7) Start from there: Inside main.jsx in the repo (index. js in the vedio at 38 min) 
+
+8) Added components boilerplate, page boiler plates and constants
+
+9) 
